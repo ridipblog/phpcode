@@ -9,4 +9,4 @@ $current_id = $statement->execute();
 print_r($_FILES['userImage']);
 echo "Done";
 ?>
-<img src="displayImage.php?id=1">
+<img src="displayImage.php?id=<?php $imageID=1; echo $imageID; ?>">
