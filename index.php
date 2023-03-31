@@ -11,6 +11,7 @@ try {
   $mail->Username = 'sendermail111@gmail.com';
   $mail->Password = 'dmerozlelddqwxqf';
   $mail->SMTPSecure = 'tls';
+  $mail->SMTPSecure ='ssl';
   $mail->Port	 = 587;
   $mail->setFrom('sendermail111@gmail.com', 'Send Mail');
   $mail->addAddress('ridipgoswami147@gmail.com');
