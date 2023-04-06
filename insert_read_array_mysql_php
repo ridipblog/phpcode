@@ -1,0 +1,51 @@
+<?php
+
+$con=mysqli_connect('localhost',"root","","show_db");
+// $names_arr = array("Yogesh singh","Sonarika Bhadoria","Vijay Maurya");
+// $names_arr_1 = array("coder 1","coder 2","coder 3");
+// // Separate Array by " , "
+// $names_str = implode(" , ",$names_arr);
+// $names_str_1 = implode(" , ",$names_arr_1);
+// // Insert record
+// $sql = "INSERT INTO student(name,data) VALUES('".$names_str."','".$names_str_1."')";
+// mysqli_query($con,$sql);
+
+// Read record
+$sql = mysqli_query($con,"SELECT * FROM student");
+$i=0;
+while($row = mysqli_fetch_assoc($sql)){
+ 
+   $name = $row['name'];
+   $data = $row['data'];
+   $name_explode = explode(" , ",$row['name']);  
+   $data_explode = explode(" , ",$row['data']);  
+
+//    echo "name : ".$name."<br>";
+//    echo "data : ".$data."<br>";
+//    print_r($data_explode[0]);
+   echo $data_explode[0]."<br>";
+   echo $data_explode[1]."<br>";
+   echo $data_explode[2]."<br>";
+   echo "</pre>";
+}
+?>
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+<body>
+    
+    <h1>Thanks For Come </h1>
+    <h1>Registration Form</h1>
+    <form action="index.php" method="post">
+        <p>Enter User Name</p>
+        <input type="text" name="name" autocomplete="off" >
+        <p>Enter User Password</p>
+        <input type="password" name="password" >
+        <input type="submit" value="Register">
+    </form>
+<img src="images/s.jpg"/>
+</body>
+</html>
