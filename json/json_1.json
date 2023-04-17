@@ -1,0 +1,17 @@
+[
+    {
+        "name": "coder 1",
+        "roll no": "123",
+        "class": "10th"
+    },
+    {
+        "name": "coder 2",
+        "roll no": "124",
+        "class": "11th"
+    },
+    {
+        "name": "coder 3",
+        "roll no": "125",
+        "class": "12th"
+    }
+]
